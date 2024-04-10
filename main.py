@@ -1,3 +1,4 @@
+import os
 
 #encryption
 def encryption():
@@ -45,9 +46,21 @@ def decryption():
 
 
 def main():
- #encryption()
- decryption()
-
+ print("Current directory  "+os.getcwd())
+ while True:
+    print("\n1.Encrypt")
+    print("\n2.Decrypt")
+    print("\n3.Exit")
+    ch=int(input("enter your choice: "))
+        
+    if ch==1:
+     encryption()
+    elif ch==2:
+        decryption()
+    elif ch==3:
+        break
+    else:
+        print("\nwrong choice")
 
 if __name__=="__main__":
  main()
