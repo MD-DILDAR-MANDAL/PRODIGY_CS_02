@@ -10,10 +10,11 @@ def encryption():
  fin = open(path, "rb")
  image = fin.read()
  fin.close()
+
  image = bytearray(image)
 
- for index in enumerate(image):
-		 image[index] = index ^ key
+ for index,values in enumerate(image):
+		 image[index] = values ^ key
  
  fin = open(path, "wb")
  fin.write(image)
